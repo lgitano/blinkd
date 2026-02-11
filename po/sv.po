@@ -1,0 +1,93 @@
+# Swedish translation of blinkd.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blinkd package.
+# Daniel Nylander <po@danielnylander.se>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blinkd 0.4.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-06 13:07+0000\n"
+"PO-Revision-Date: 2006-01-15 16:35+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blink.c:184
+#, c-format
+msgid "Error.  Use value from 0 to %d for --rate.\n"
+msgstr "Fel.  Använd värde från 0 till %d för --rate.\n"
+
+#: blink.c:244
+#, c-format
+msgid ""
+"Usage: %s [options]\n"
+"Options are\n"
+"  -c,   --capslockled   use Caps-Lock LED\n"
+"  -h,   --help          display this help and exit\n"
+"  -m s, --machine=s     let keyboard of machine s blink\n"
+"  -n,   --numlockled    use Num-Lock LED\n"
+"  -r n, --rate=n        set blink rate to n\n"
+"  -s,   --scrolllockled use Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    use tcp port n\n"
+"  -v,   --version       output version information and exit\n"
+msgstr ""
+"Användning: %s [flaggor]\n"
+"Flaggor är\n"
+"  -c,   --capslockled   använd Caps-Lock LED\n"
+"  -h,   --help          visa den här hjälpen och avsluta\n"
+"  -m s, --machine=s     låt tangentbordet på maskin s blinka\n"
+"  -n,   --numlockled    använd Num-Lock LED\n"
+"  -r n, --rate=n        sät blinkhastighet till n\n"
+"  -s,   --scrolllockled använd Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    använd tcp-port n\n"
+"  -v,   --version       skriv ut versionsinformation och avsluta\n"
+
+#: blink.c:261
+#, c-format
+msgid "%s: Error in arguments.  Try %s --help.\n"
+msgstr "%s: Fel i argument.  Försök med %s --help.\n"
+
+#: blink.c:278
+#, c-format
+msgid "Unknown host %s.\n"
+msgstr "Okänd värd %s.\n"
+
+#: blinkd.c:596
+#, c-format
+msgid ""
+"Usage: %s [options]\n"
+"Options are\n"
+"  -c,   --capslockled   use Caps-Lock LED\n"
+"  -f t, --off-time=t    set off blink time to t\n"
+"  -h,   --help          display this help and exit\n"
+"  -n,   --numlockled    use Num-Lock LED\n"
+"  -o t, --on-time=t     set on blink time to t\n"
+"  -p t, --pause=t       set pause time to t\n"
+"  -r,   --no-reopen     don't reopen /dev/console\n"
+"  -s,   --scrolllockled use Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    use tcp port n\n"
+"  -v,   --version       output version information and exit\n"
+"Unit for all time values t is tenth of a second.\n"
+msgstr ""
+"Användning: %s [flaggor]\n"
+"Flaggor är\n"
+"  -c,   --capslockled   använd Caps-Lock LED\n"
+"  -f t, --off-time=t    ställ in blinktid av till t\n"
+"  -h,   --help          visa den här hjälpen och avsluta\n"
+"  -n,   --numlockled    använd Num-Lock LED\n"
+"  -o t, --on-time=t     ställ in blinktid på till t\n"
+"  -p t, --pause=t       set pause time to t\n"
+"  -r,   --no-reopen     återöppna inte /dev/console\n"
+"  -s,   --scrolllockled använd Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    använd tcp-port n\n"
+"  -v,   --version       skriv ut versionsinformation och avsluta\n"
+"Enhet för att tidsvärden är tiondel av en sekund.\n"
+
+#: blinkd.c:616
+#, c-format
+msgid "%s: Error in arguments.  Try %s --help\n"
+msgstr "%s: Fel i argument.  Försök med %s --help\n"
+

@@ -1,0 +1,93 @@
+# blinkd/blink messages file for gettext.
+# Copyright (C) 1999 W. Martin Borgert
+# This file is distributed under the same license as the blinkd package.
+# W. Martin Borgert <debacle@debian.org>, 1999.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: blinkd 0.4.8\n"
+"POT-Creation-Date: 2001-02-04 14:26+0000\n"
+"PO-Revision-Date: 2000-05-01 11:04+00:00\n"
+"Last-Translator: W. Martin Borgert <debacle@debian.org>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#
+#: blink.c:184
+#, c-format
+msgid "Error.  Use value from 0 to %d for --rate.\n"
+msgstr "Fehler.  Benutze Werte von 0 bis %d für --rate\n"
+
+#: blink.c:244
+#, c-format
+msgid ""
+"Usage: %s [options]\n"
+"Options are\n"
+"  -c,   --capslockled   use Caps-Lock LED\n"
+"  -h,   --help          display this help and exit\n"
+"  -m s, --machine=s     let keyboard of machine s blink\n"
+"  -n,   --numlockled    use Num-Lock LED\n"
+"  -r n, --rate=n        set blink rate to n\n"
+"  -s,   --scrolllockled use Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    use tcp port n\n"
+"  -v,   --version       output version information and exit\n"
+msgstr ""
+"Benutzung: %s [Optionen]\n"
+"Optionen sind\n"
+"  -c,   --capslockled   benutze die Caps-Lock LED\n"
+"  -h,   --help          zeige diese Hilfe und beende Programm\n"
+"  -m s, --machine=s     lasse Keyboard von Maschine s blinken\n"
+"  -n,   --numlockled    benutze die Num-Lock LED\n"
+"  -r n, --rate=n        setze Blinkrate auf n\n"
+"  -s,   --scrolllockled benutze die Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    benutze TCP Port n\n"
+"  -v,   --version       zeige Versionsnummer und beende Programm\n"
+
+#: blink.c:261
+#, c-format
+msgid "%s: Error in arguments.  Try %s --help.\n"
+msgstr "%s: Fehler in Argumenten.  Versuche %s --help.\n"
+
+#: blink.c:278
+#, c-format
+msgid "Unknown host %s.\n"
+msgstr "Unbekannter Host %s.\n"
+
+#: blinkd.c:585
+#, c-format
+msgid ""
+"Usage: %s [options]\n"
+"Options are\n"
+"  -c,   --capslockled   use Caps-Lock LED\n"
+"  -f t, --off-time=t    set off blink time to t\n"
+"  -h,   --help          display this help and exit\n"
+"  -n,   --numlockled    use Num-Lock LED\n"
+"  -o t, --on-time=t     set on blink time to t\n"
+"  -p t, --pause=t       set pause time to t\n"
+"  -r,   --no-reopen     don't reopen /dev/console\n"
+"  -s,   --scrolllockled use Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    use tcp port n\n"
+"  -v,   --version       output version information and exit\n"
+"Unit for all time values t is tenth of a second.\n"
+msgstr ""
+"Benutzung: %s [Optionen]\n"
+"Optionen sind\n"
+"  -c,   --capslockled   benutze Caps-Lock LED\n"
+"  -f t, --off-time=t    setze die Blink-Aus-Zeit auf t\n"
+"  -h,   --help          zeige diese Hilfe und beende Programm\n"
+"  -n,   --numlockled    benutze Num-Lock LED\n"
+"  -o t, --on-time=t     setze die Blink-An-Zeit auf t\n"
+"  -p t, --pause=t       setze Blink-Pausen-Zeit auf t\n"
+"  -r,   --no-reopen     /dev/console nicht wiederöffnen\n"
+"  -s,   --scrolllockled benutze Scroll-Lock LED\n"
+"  -t n, --tcp-port=n    benutze TCP Port n\n"
+"  -v,   --version       zeige Versionsnummer und beende Programm\n"
+"Einheit für alle Zeitwerte t sind Zehntelsekunden.\n"
+
+#: blinkd.c:605
+#, c-format
+msgid "%s: Error in arguments.  Try %s --help\n"
+msgstr "%s: Fehler in Argumenten.  Versuche %s --help.\n"
