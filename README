@@ -1,0 +1,8 @@
+blinkd for DEBIAN
+-----------------
+
+This package is made for Debian GNU/Linux.
+
+See man pages blink(1) and blinkd(8) for more information.
+
+W. Martin Borgert <debacle@debian.org>, Sun, 28 Jun 1998 14:19:21 +0000

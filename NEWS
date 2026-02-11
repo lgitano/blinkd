@@ -1,0 +1,32 @@
+Changes in blinkd 0.4.8
+
+* License is now GPL-3.
+
+Changes in blinkd 0.3.6
+
+* Option --no-reopen added.
+
+Changes in blinkd 0.3.1
+
+* New man pages.
+
+Changes in blinkd 0.3.0
+
+* I18n.
+* Supporting all three PC keyboard LEDs.
+
+Changes in blinkd 0.2.1
+
+* No user visible changes.
+
+
+Changes in blinkd 0.2
+
+* Command line option --rate accepts '+' and '-'.
+* blink allows to connect server on other host.
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[ 	]*$"
+end:

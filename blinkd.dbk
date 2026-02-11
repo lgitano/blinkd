@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+  <!ENTITY debian "<productname>Debian GNU/Linux</productname>">
+  <!ENTITY led    "<abbrev>LED</abbrev>">
+]>
+
+<!-- Manual page for blinkd, DocBook source file (C) 1998 W. Martin Borgert
+     debacle@debian.org -->
+
+<refentry>
+  <refentryinfo>
+    <address>
+      <email>debacle@debian.org</email>
+    </address>
+    <author>
+      <firstname>W.</firstname>
+      <othername>Martin</othername>
+      <surname>Borgert</surname>
+    </author>
+    <copyright>
+      <year>1999-2008</year>
+      <holder>W. Martin Borgert</holder>
+    </copyright>
+    <date>1999-06-01</date>
+  </refentryinfo>
+  <refmeta>
+    <refentrytitle>blinkd</refentrytitle>
+
+    <manvolnum>8</manvolnum>
+  </refmeta>
+  <refnamediv>
+    <refname>blinkd</refname>
+
+    <refpurpose>Blinks keyboard &led;s for various
+      purposes.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>blinkd</command>
+
+      <arg><option>-c</option></arg>
+
+      <arg><option>--capslockled</option></arg>
+
+      <arg><option>-f <replaceable>t</replaceable></option></arg>
+
+      <arg><option>--off-time=<replaceable>t</replaceable></option></arg>
+
+      <arg><option>-h</option></arg>
+
+      <arg><option>--help</option></arg>
+
+      <arg><option>-n</option></arg>
+
+      <arg><option>--numlockled</option></arg>
+
+      <arg><option>-o <replaceable>t</replaceable></option></arg>
+
+      <arg><option>--on-time=<replaceable>t</replaceable></option></arg>
+
+      <arg><option>-p <replaceable>t</replaceable></option></arg>
+
+      <arg><option>--pause=<replaceable>t</replaceable></option></arg>
+
+      <arg><option>-r</option></arg>
+
+      <arg><option>--no-reopen</option></arg>
+
+      <arg><option>-s</option></arg>
+
+      <arg><option>--scrolllockled</option></arg>
+
+      <arg><option>-t <replaceable>n</replaceable></option></arg>
+
+      <arg><option>--tcp-port=<replaceable>n</replaceable></option></arg>
+
+      <arg><option>-v</option></arg>
+
+      <arg><option>--version</option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>
+    <title>Description</title>
+
+    <para>The programs blink(1) and blinkd(8) help you to count or to
+      monitor things like incoming calls on your voice box or incoming
+      faxes.  E.g. they blink Scroll-Lock &led; for incoming voice
+      calls and Num-Lock &led; for incoming faxes.  Normally, all
+      three &led;s (Num-Lock, Caps-Lock, and Scroll-Lock) are handled.
+      The blink client will ask the blinkd server to blink the
+      specified &led; with the given rate.</para>
+  </refsect1>
+  <refsect1>
+    <title>Blinkd Options</title>
+    <variablelist>
+      <varlistentry>
+	<term><option>-c</option>
+	  <option>--capslockled</option></term>
+	<listitem>
+	  <para>Handle the Caps-Lock &led;.  If none of the three
+	    &led;s is specified, the default is to handle all of
+	    them.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-f <replaceable>t</replaceable></option>
+	  <option>--off-time=<replaceable>t</replaceable></option></term>
+	<listitem>
+	  <para>Set the off blink time to the value
+	    <replaceable>t</replaceable>.  The unit is one tenth of a
+	    second.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-h</option>
+	  <option>--help</option></term>
+	<listitem>
+	  <para>Gives a short help on the command line options and
+	    exit.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-n</option>
+	  <option>--numlockled</option></term>
+	<listitem>
+	  <para>Handle the Num-Lock &led;.  If none of the three
+	    &led;s is specified, the default is to handle all of
+	    them.</para>
+      </listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-o <replaceable>t</replaceable></option>
+	  <option>--on-time=<replaceable>t</replaceable></option></term>
+	<listitem>
+	  <para>Set the on blink time to the value
+	    <replaceable>t</replaceable>.  The unit is one tenth of a
+	    second.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-p <replaceable>t</replaceable></option>
+	  <option>--pause=<replaceable>t</replaceable></option></term>
+	<listitem>
+	  <para>Set the pause time between blinking to the value
+	    <replaceable>t</replaceable>.  The unit is one tenth of a
+	    second.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-r</option>
+	  <option>--no-reopen</option></term>
+	<listitem>
+	  <para>Don't allow blinkd to close and re-open
+	    <filename>/dev/console</filename> all the time.  This is
+	    to prevent disk activity, but may lead to inaccuracy when
+	    switching between virtual consoles.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-s</option>
+	  <option>--scrolllockled</option></term>
+	<listitem>
+	  <para>Handle the Scroll-Lock &led;.  If none of the three
+	    &led;s is specified, the default is to handle all of
+	    them.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-t <replaceable>n</replaceable></option>
+	  <option>--tcp-port=<replaceable>n</replaceable></option></term>
+	<listitem>
+	  <para>Use the tcp port <replaceable>n</replaceable>.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-v</option>
+	  <option>--version</option></term>
+	<listitem>
+	  <para>Give a short version information and exit.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Files</title>
+
+    <para><filename>/etc/init.d/blinkd</filename> starts and stops the
+      blinkd daemon.  All options have to be set in
+      <filename>/etc/default/blinkd</filename>.</para>
+  </refsect1>
+  <refsect1>
+    <title>Author</title>
+
+      <para>Blinkd/blink is made by <author><firstname>W.</firstname>
+	<othername>Martin</othername> <surname>Borgert</surname></author>
+	<email>debacle@debian.org</email>, as well as this manual
+	page.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>Thanks</title>
+
+    <para>All important code is taken from tleds and xtleds, made by
+      Jouni Lohikoski <email>Jouni.Lohikoski@iki.fi</email>, only the
+      bugs are mine alone.  Paul Slootman
+      <email>paul@debian.org</email>; corrected some of my
+      typos.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>Copyright</title>
+
+    <para>Copyright 1998-2001 W. Martin Borgert and released under the
+      <acronym>GNU</acronym> General Public License
+      (<abbrev>GPL</abbrev>).  Permission is granted to copy,
+      distribute and/or modify this document under the terms of the
+      <acronym>GNU</acronym> General Public License, Version 3
+      or any later version published by the Free Software Foundation.</para>
+
+    <para>A copy of the GNU License is available in this
+      Debian package as
+      <filename>/usr/share/doc/blinkd/copyright</filename>.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>Bugs</title>
+
+    <para>See blink(1) for information on bugs.</para>
+  </refsect1>
+  <refsect1>
+    <title>Date</title>
+
+    <para>Version 0.4.8 released on 2008-01-18.</para>
+  </refsect1>
+</refentry>

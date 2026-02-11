@@ -1,0 +1,92 @@
+2008-01-18 W. Martin Borgert <debacle@debian.org>
+
+	* Version 0.4.8 now under GPL-3.
+
+2003-01-26 W. Borgert <debacle@debian.org>
+
+	* Version 0.4.6 released.
+
+	* blinkd.c: Hopefully better handling of keyboard device.
+
+	* configure.ac: Added AM_MAINTAINER_MODE to get finally rid of
+	  autoconf and automake dependencies.
+
+	* Added web page stuff for savannah (http://www.nongnu.org/blinkd/).
+
+2002-11-19 W. Borgert <debacle@debian.org>
+
+	* Version 0.4.5 released.
+
+	* Using new autoconf/automake.
+
+	* Manual pages now based on DocBook/XML instead of DocBook/SGML.
+
+2002-07-28 W. Borgert <debacle@debian.org>
+
+	* Version 0.4.3 released.
+
+	* debian/control: Added a conflict with ledcontrol.
+
+2001-10-24 W. Borgert <debacle@debian.org>
+
+	* Version 0.4.2 released.
+
+	* Using new autoconf/automake.
+
+	* No user visible changes.
+
+2001-02-04 W. Borgert <debacle@debian.org>
+
+	* Version 0.4 released.
+
+	* Options for blinkd are now set in /etc/default/blinkd.
+
+2000-05-01  W. Borgert <debacle@debian.org>
+
+	* Version 0.3.6 released.
+
+	* Added option --no-reopen to blinkd.  Forbids blinkd to
+	  close/reopen /dev/console to prevent from disk access.
+
+1999-10-19  W. Borgert <debacle@debian.org>
+
+	* Changed man pages.
+
+	* Version 0.3.1 released.
+
+1999-10-19  W. Borgert <debacle@debian.org>
+
+	* Changed man pages.
+
+	* Version 0.3.1 released.
+
+1999-06-29  W. Borgert <debacle@debian.org>
+
+	* Version 0.3.0 released.
+
+	* Using gettext for i18n.
+
+	* Using pthreads internally.
+
+	* Using docbook (SGML) for man page.
+
+	* Supporting all three PC keyboard LEDs.
+
+1999-02-14  W. Borgert  <debacle@debian.org>
+
+	* Version 0.2.1 released.
+
+	* Added some files in doc directory.
+
+1999-02-13  W. Borgert  <debacle@debian.org>
+
+	* Version 0.2 released.
+
+	* configure.in etc.: Using autoconf/automake now.
+
+	* blink.c/blinkd.c: Preliminary changes for gettext.
+
+	* blink.c: New option for using remote server.
+
+	* blink.c: Allow '+' and '-' for incrementing/decrementing blink
+	  rate.

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+  <!ENTITY debian "<productname>Debian GNU/Linux</productname>">
+  <!ENTITY led    "<abbrev>LED</abbrev>">
+]>
+
+<!-- Manual page for blink, DocBook source file (C) 1998 W. Martin Borgert
+     debacle@debian.org -->
+
+<refentry>
+  <refentryinfo>
+    <address>
+      <email>debacle@debian.org</email>
+    </address>
+    <author>
+      <firstname>W.</firstname>
+      <othername>Martin</othername>
+      <surname>Borgert</surname>
+    </author>
+    <copyright>
+      <year>1999-2008</year>
+      <holder>W. Martin Borgert</holder>
+    </copyright>
+    <date>1999-06-01</date>
+  </refentryinfo>
+  <refmeta>
+    <refentrytitle>blink</refentrytitle>
+
+    <manvolnum>1</manvolnum>
+  </refmeta>
+  <refnamediv>
+    <refname>blink</refname>
+
+    <refpurpose>Blinks keyboard &led;s for various
+      purposes.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>blink</command>
+
+      <arg><option>-c</option></arg>
+
+      <arg><option>--capslockled</option></arg>
+
+      <arg><option>-h</option></arg>
+
+      <arg><option>--help</option></arg>
+
+      <arg><option>-m <replaceable>s</replaceable></option></arg>
+
+      <arg><option>--machine=<replaceable>s</replaceable></option></arg>
+
+      <arg><option>-n</option></arg>
+
+      <arg><option>--numlockled</option></arg>
+
+      <arg><option>-r <replaceable>n</replaceable></option></arg>
+
+      <arg><option>--rate=<replaceable>n</replaceable></option></arg>
+
+      <arg><option>-s</option></arg>
+
+      <arg><option>--scrolllockled</option></arg>
+
+      <arg><option>-t <replaceable>n</replaceable></option></arg>
+
+      <arg><option>--tcp-port=<replaceable>n</replaceable></option></arg>
+
+      <arg><option>-v</option></arg>
+
+      <arg><option>--version</option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>
+    <title>Description</title>
+
+    <para>The programs blink(1) and blinkd(8) help you to count or to
+      monitor things like incoming calls on your voice box or incoming
+      faxes.  E.g. they blink Scroll-Lock &led; for incoming voice
+      calls and Num-Lock &led; for incoming faxes.  Normally, all
+      three &led;s (Num-Lock, Caps-Lock, and Scroll-Lock) are handled.
+      The blink client will ask the blinkd server to blink the
+      specified &led; with the given rate.</para>
+  </refsect1>
+  <refsect1>
+    <title>Usage</title>
+
+    <para>On &debian; <command>blinkd</command> is started without any
+      options from <filename>/etc/init.d/blinkd</filename>, unless the
+      system administrator changed this.  See blinkd(8) for more
+      information.  If you like to count something, e.g. incoming
+      calls on your voice mailbox, incoming faxes in your spool or
+      whatever, just write a script, that calls <userinput>blink
+      --numlockled --rate n</userinput> for the first thing you like
+      to count and <userinput>blink --scrolllockled --rate
+      m</userinput> for the second thing you like to count and maybe
+      <userinput>blink --capslockled --rate l</userinput> for the
+      third.  n, m and l are the current numbers of things you like to
+      count.</para>
+  </refsect1>
+  <refsect1>
+    <title>Blink Options</title>
+    <variablelist>
+      <varlistentry>
+	<term><option>-c</option>
+	  <option>--capslockled</option></term>
+	<listitem>
+	  <para>Use the Caps-Lock &led;.  If none of the three &led;s
+	    is specified, no other rate value than zero is
+	    allowed.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-h</option>
+          <option>--help</option></term>
+	<listitem>
+	  <para>Gives a short help on the command line options and
+	    exit.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-m <replaceable>s</replaceable></option>
+	  <option>--machine=<replaceable>s</replaceable></option></term>
+	<listitem>
+	  <para>Use the machine <replaceable>s</replaceable>, where
+	    the keyboard &led;s will blink.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-n</option>
+	  <option>--numlockled</option></term>
+	<listitem>
+	  <para>Use the Num-Lock &led;.  If none of the three &led;s
+	    is specified, no other rate value than zero is
+	    allowed.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-r <replaceable>n</replaceable></option>
+	  <option>--rate=<replaceable>n</replaceable></option></term>
+	<listitem>
+	  <para>Sets the blink rate to the given value
+	    <replaceable>n</replaceable>.  This can be either a number
+	    between 0 and 29, inclusively, or either a
+	    <symbol>+</symbol> or a <symbol>-</symbol> character,
+	    incrementing or decrementing the current rate by one.  If
+	    you specify any other rate than zero, you have also to
+	    specify an &led;.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-s</option>
+          <option>--scrolllockled</option></term>
+	<listitem>
+	  <para>Use the Scroll-Lock &led;.  If none of the three
+	    &led;s is specified, no other rate value than zero is
+	    allowed.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-t <replaceable>n</replaceable></option>
+	  <option>--tcp-port=<replaceable>n</replaceable></option></term>
+	<listitem>
+	  <para>Use the tcp port <replaceable>n</replaceable> on that
+	    the blinkd server waits.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><option>-v</option>
+	  <option>--version</option></term>
+	<listitem>
+	  <para>Give a short version information and exit.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Examples</title>
+
+    <para>An example for the use of blinkd with the vbox program (an
+      <abbrev>ISDN</abbrev> answering machine) is provided in
+      <filename>/usr/share/doc/blinkd/examples/standard.tcl</filename>.
+      Another example for use with the mgetty fax program is provided
+      in <filename>/usr/share/doc/blinkd/examples/new_fax</filename>.</para>
+  </refsect1>
+  <refsect1>
+    <title>Author</title>
+
+      <para>Blinkd/blink is made by <author><firstname>W.</firstname>
+	<othername>Martin</othername> <surname>Borgert</surname></author>
+	<email>debacle@debian.org</email>, as well as this manual
+	page.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>Copyright</title>
+
+    <para>Copyright 1998-2008 W. Martin Borgert and released under the
+      <acronym>GNU</acronym> General Public License
+      (<abbrev>GPL</abbrev>).  Permission is granted to copy,
+      distribute and/or modify this document under the terms of the
+      <acronym>GNU</acronym> General Public License, Version 3
+      or any later version published by the Free Software Foundation.</para>
+
+    <para>A copy of the GNU Free Documentation License is available in this
+      Debian package as
+      <filename>/usr/share/doc/blinkd/copyright</filename>.</para>
+
+  </refsect1>
+  <refsect1>
+    <title>Bugs</title>
+
+    <para>Anyone can contact the blinkd server.  There is no security
+      mechanism yet.</para>
+
+    <para>These programs seem to run at least on &debian;
+      <hardware>alpha</hardware>, <hardware>arm</hardware>,
+      <hardware>i386</hardware>, <hardware>m68k</hardware>,
+      <hardware>powerpc</hardware>, and <hardware>sparc</hardware>.
+      Please send me a mail, if it does run on other platforms or if
+      you need something fixed for another platform.</para>
+
+    <para>Internationalization is just in the beginning.  Contribute,
+      if you like!</para>
+
+    <para>Please tell me about grammatical or spelling errors!</para>
+  </refsect1>
+  <refsect1>
+    <title>Date</title>
+
+    <para>Version 0.4.8 released on 2008-01-18.</para>
+  </refsect1>
+</refentry>
