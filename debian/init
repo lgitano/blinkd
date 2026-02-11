@@ -1,0 +1,46 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          blinkd
+# Required-Start:    $network $syslog
+# Required-Stop:     $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start blinkd daemon at boot time
+# Description:       Enable blinking keyboard LED service.
+### END INIT INFO
+
+# Please, set any options in /etc/default/blinkd.
+# See blinkd(8) for options.
+
+[ -r /etc/default/blinkd ] && . /etc/default/blinkd
+
+DAEMON=/usr/sbin/blinkd 
+test -f $DAEMON || exit 0
+
+case "$1" in
+  start)
+	echo "Starting blinkd."
+        start-stop-daemon --start --quiet --exec $DAEMON -- $OPTIONS
+	;;
+  stop)
+	echo "Stopping blinkd."
+        start-stop-daemon --stop --quiet --oknodo --exec $DAEMON
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  reload)
+  	start-stop-daemon --stop --signal 1 --q	quiet --exec $DAEMON
+	;;
+  force-reload)
+  	$0 reload
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|reload|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

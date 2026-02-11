@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+DEB_INSTALL_CHANGELOGS_ALL=ChangeLog
+DEB_INSTALL_DOCS_ALL=AUTHORS NEWS README blink.dbk blinkd.dbk
+DEB_INSTALL_EXAMPLES_blinkd=examples/new_fax examples/standard.tcl
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+common-build-indep::
+	$(MAKE) blink.1
+	$(MAKE) blinkd.8
+
+clean::
+	rm -f blink.1 blinkd.8
+

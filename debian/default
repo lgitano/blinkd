@@ -1,0 +1,6 @@
+# -*- shell-script -*-
+
+# Please set any options for blinkd in this file.  See blinkd(8) for
+# options.
+
+#OPTIONS="--no-reopen"

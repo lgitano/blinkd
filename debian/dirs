@@ -1,0 +1,8 @@
+etc/default
+etc/init.d
+usr/bin
+usr/sbin
+usr/share/man
+usr/share/man/man1
+usr/share/man/man8
+usr/share/doc/blinkd

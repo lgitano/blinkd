@@ -1,0 +1,19 @@
+Source: blinkd
+Section: utils
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Standards-Version: 3.7.3
+Build-Depends: autotools-dev, debhelper (>= 4), xsltproc, docbook-xsl (>= 1.56.1-2), gettext, cdbs, intltool (>= 0.37)
+
+Package: blinkd
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: ledcontrol
+Suggests: isdnutils | mgetty
+Description: Blinks keyboard LEDs e.g. for answering machine or fax
+ Blinkd is a client/server pair, that lets the keyboard LEDs
+ blink, indicating things like the number of incoming voice
+ calls in the voice box or incoming faxes in the spool.
+ Because client and server communicate via TCP/IP, they can
+ be located on different machines.  Do not use the software
+ for vital purposes, as there is no security mechanism.
